@@ -1,0 +1,121 @@
+.chenarPlacinta1,
+.chenarPlacinta2 {
+  background-color: lightgoldenrodyellow;
+  row-gap: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+}
+body {
+  background-color: olivedrab;
+  font-size: 1em;
+  text-indent: 2%;
+}
+.placinte {
+  column-gap: 50px;
+  display: flex;
+  height: 350px;
+  justify-content: space-between;
+  margin: 25px;
+  min-width: 1250px;
+}
+
+.chenarPlacinta2 {
+  max-width: 600px;
+  min-width: 500px;
+}
+.placintaimg {
+  display: flex;
+  height: 200px;
+  margin: 20px;
+  width: 300px;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: cyan;
+    font-size: 3em;
+  }
+  .chenarPlacinta1,
+  .chenarPlacinta2 {
+    background-color: cyan;
+  }
+  .chenarPlacinta2 {
+    display: none;
+  }
+  .placinte {
+    align-items: flex-start;
+    column-gap: 350px;
+    flex-direction: column;
+    max-width: 500px;
+  }
+  h3 {
+    opacity: 0;
+  }
+  .imagine1 {
+    width: 750px;
+  }
+}
+@media screen and (max-height: 500px) and (min-width: 500px) {
+  body {
+    background-color: pink;
+    font-size: 2em;
+  }
+}
+.nav_bar {
+  background-color: lightslategray;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-left: 20px;
+  margin-top: -10px;
+  opacity: 0.8;
+  padding-right: 100px;
+  position: fixed;
+}
+.drop-content {
+  display: none;
+  position: absolute;
+}
+.dropdown:hover .drop-content {
+  display: block;
+}
+.drop-content a {
+  background-color: green;
+  color: black;
+  display: inline-block;
+  margin-right: 70px;
+  padding: 8px;
+  padding-right: 90px;
+  text-align: left;
+  text-decoration: none;
+}
+.drop-content a:hover {
+  background-color: lightblue;
+}
+.pag2,
+.pag3,
+.pag4,
+.dropdown {
+  color: yellowgreen;
+  display: inline-block;
+  padding: 10px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.imagine1 {
+  width: 300px;
+}
+.imagine2 {
+  display: flex;
+  width: 350px;
+}
+
+.cumpara {
+  width: 200px;
+}

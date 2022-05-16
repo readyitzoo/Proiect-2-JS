@@ -12,7 +12,7 @@ const port = 3000;
 let products = ["mere", "pere", "piersici"];
 
 app.get("/",(req,res) => {
-    res.sendFile(path.join(__dirname,"views/node_html.html"))
+    res.sendFile(path.join(__dirname,"views/Placinte.html"))
 });
 
 app.get("/about",(req,res) => {
