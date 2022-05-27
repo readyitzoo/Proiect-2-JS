@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/donatii.css" />
+    <title>Donatii</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav_bar">
+        <li><img src="../static/hochland.jpg" width="50" alt="logo" /></li>
+        <li><a href="Acasa.html" class="pag2"> Pagina principala</a></li>
+        <li><a href="Placinte.html" class="pag3"> Alte placinte</a></li>
+        <li><a href="Donatii.html" class="pag2"> Donatii</a></li>
+        <li><button onclick="DarkMode()">Dark/Light Mode</button></li>
+      </ul>
+    </nav>
+    <form>
+      <label>Adresa de email:</label>
+      <input type="text" id= "em"/><br />
+      <label
+        >Doresti sa primesti si notificari despre noile videoclipuri?</label
+      >
+      <input type="checkbox" /><br />
+      <label class="l1"
+        >Vrei sa devii membru VIP Htelemea? Bifeaza aici si te vom contacta pe
+        email</label
+      >
+      <input class="l1" type="checkbox" /> <br />
+      <label class="l2"
+        >Daca doresti sa ajuti la imbunatatirea paginilor, selecteaza una din
+        optiunile de mai jos:</label
+      ><br />
+      <input class="l3" type="radio" name="bani" />
+      <label class="l3"> 1 leu</label> <br />
+      <input class="l4" type="radio" name="bani" />
+      <label class="l4"> 2 lei</label> <br />
+      <input class="l5" type="radio" name="bani" />
+      <label class="l5"> 3 lei</label> <br />
+      <input class="l6" type="radio" name="bani" />
+      <label class="l6"> 4 lei</label> <br />
+      <input class="l7" type="radio" name="bani" />
+      <label class="l7"> 5 lei</label> <br />
+      <input class="l10" type="radio" name="bani" />
+      <label class="l10"> 10 lei</label> <br />
+      <label class="l8">alta suma :</label>
+      <input class="l8" type="radio" name="bani" />
+      <br />
+      <label class="l8">Introduceti suma :</label>
+      <input class="l8" type="text" id = "altiBani" /><br />
+      <input type="button" onclick="ValidareFormular()" id="sub" value="Submit"></input>
+      <div id = "felicitari"></div>
+      <div id="asteapta"></div>
+    </form>
+    <div>
+      <figure>
+        <img class="burduf" id = "id1" src="../static/branza_burduf.jpg" alt="burduf">
+      </figure>
+    </div>
+    <div><img id="seif" src="../static/seif.png" alt="seif" ></div>
+    <script src="../static/donatii.js"></script>
+  </body>
+</html>

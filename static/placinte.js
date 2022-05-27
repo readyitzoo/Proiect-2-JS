@@ -1,3 +1,4 @@
+
 let produse;
 
 window.onload = function () {
@@ -21,7 +22,6 @@ window.onload = function () {
     document.getElementById(i+"3").addEventListener("click",function () {reseteazaProdusele(i)});
     }
 }
-
 function afiseazaCos(cost) {
     let nav = document.getElementById("navbar");
     const cos = document.createElement("li");
@@ -31,6 +31,8 @@ function afiseazaCos(cost) {
     cos.innerText = "Cost: " + cost + " lei";
     cos.style.width = "80px";
     nav.append(cos);
+    localStorage.clear;
+    localStorage.setItem("cost", 0);
 }
 function refreshCos(cost) {
     const cos = document.getElementById("cos");
@@ -49,23 +51,61 @@ function setCos(cos){
     localStorage.setItem("cos", JSON.stringify(cos));
 }
 
-setCos({"1": 5, "2": 3});
+afiseazaCos(0);
+setCos({});
 
 function adaugaInCos(id){
-    let cos = getCos();
+    let cos = getCos(), cost = parseInt(localStorage.getItem("cost"));
     id = id.toString();
-    console.log(produse)
     if (produse[id])
         if (produse[id][1])
         {
-            
+            if (cos[id]){
+                cos[id] += 1;
+                setCos(cos);
+            }
+            else {
+                cos[id] = 1;
+                setCos(cos);
+            }
+            cost += produse[id][0];
+            cost.stringify;
+            localStorage.setItem("cost", cost);
+            refreshCos(cost);
+            // for (let i = 0; i <= 4; i += 1){
+            //     let cant = cos[i];
+            //     while (cant){
+            //         cost += produse[i][0];
+            //         cant -= 1;
+            //     }
+            // }
         }
 }
 
 function stergeDinCos(id){
-
+    let cos = getCos(), cost = parseInt(localStorage.getItem("cost"));
+    id = id.toString();
+    if (cos[id] > 0){
+        cos[id] -= 1;
+        produse[id][1] += 1;
+        setCos(cos);
+        cost -= produse[id][0];
+        cost.stringify;
+        localStorage.setItem("cost", cost);
+        refreshCos(cost);
+    }
 }
 
 function reseteazaProdusele(id){
-
+    let cos = getCos(), cost = parseInt(localStorage.getItem("cost"));
+    id = id.toString();
+    if (!cos[id])
+        return;
+    cost -= cos[id] * produse[id][0];
+    produse[id][1] += cos[id];
+    cos[id] = 0;
+    setCos(cos);
+    cost.stringify;
+    localStorage.setItem("cost", cost);
+    refreshCos(cost);
 }

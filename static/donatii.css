@@ -1,0 +1,95 @@
+#id1, #id2{
+  height:50px;
+  width: 100px;
+  position: absolute;
+  background-color: black;
+}
+#sub{
+  background-color: wheat;
+}
+body {
+  background-color: antiquewhite;
+  font-size: 1em;
+}
+#seif {
+  margin-left: 450px;
+  position:absolute;
+  top: 400px;
+  height: 300px;
+  width: 250px;
+  z-index: 0;
+
+}
+.nav_bar {
+  background-color: lightslategray;
+  column-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-left: 20px;
+  margin-top: -70px;
+  opacity: 0.8;
+  padding-right: 100px;
+  position: fixed;
+}
+.drop-content {
+  display: none;
+  position: absolute;
+}
+.dropdown:hover .drop-content {
+  display: block;
+}
+.drop-content a {
+  background-color: green;
+  color: black;
+  display: inline-block;
+  margin-right: 70px;
+  padding: 8px;
+  padding-right: 90px;
+  text-align: left;
+  text-decoration: none;
+}
+.drop-content a:hover {
+  background-color: lightblue;
+}
+.pag2,
+.pag3,
+.pag4,
+.dropdown {
+  color: yellowgreen;
+  display: inline-block;
+  text-align: left;
+  text-decoration: none;
+}
+form {
+  margin-left: 20px;
+  margin-top: 90px;
+}
+.l10 {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: lightpink;
+    font-size: 1.5em;
+  }
+  .l1,
+  .l8 {
+    display: none;
+  }
+  .l10 {
+    display: inline;
+  }
+}
+@media screen and (max-height: 500px) and (min-width: 500px) {
+  body {
+    background-color: lightblue;
+    font-size: 1.2em;
+  }
+  .l3,
+  .l4,
+  .l5,
+  .l10 {
+    display: none;
+  }
+}

@@ -1,4 +1,5 @@
 const express = require("express");
+const res = require("express/lib/response");
 
 const app = express();
 
@@ -16,22 +17,25 @@ app.get("/",(req,res) => {
 });
 
 app.get("/about",(req,res) => {
-    res.send("edddasaa");
+    res.sendFile(path.join(__dirname,"views/Donatii.html"))
 });
 
-app.get("/products",(req,res) => {
-    res.send(products);
-});
-
-app.get("/product/:productId",(req,res) => {
-    const productId = req.params.productId
-    res.send(products[productId]);
-});
-
-app.get("/product/:adaugaProdus",(req,res) => {
-    const adaugaProdus = req.params.adaugaProdus
-    res.send(adaugaProdus)
+app.get("*", (req,res) => {
+    res.sendFile(__dirname + "/views/404.html")
 })
+// app.get("/products",(req,res) => {
+//     res.send(products);
+// });
+
+// app.get("/product/:productId",(req,res) => {
+//     const productId = req.params.productId
+//     res.send(products[productId]);
+// });
+
+// app.get("/product/:adaugaProdus",(req,res) => {
+//     const adaugaProdus = req.params.adaugaProdus
+//     res.send(adaugaProdus)
+// })
 
 
 app.listen(port, hostname, () => {
